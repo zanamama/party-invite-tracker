@@ -3,7 +3,13 @@ import { useState } from 'react';
 export default function App() {
   const [guests, setGuests] = useState([]);
   const [newGuest, setNewGuest] = useState('');
-
+  
+  const handleAddGuest = () => {
+    if (newGuest.trim() !== '') {
+      setGuests([...guests, newGuest]);
+      setNewGuest('');
+    }
+  };
   return <div>Party Invite Tracker</div>;
     return (
     <div>
