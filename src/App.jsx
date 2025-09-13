@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
 export default function App() {
-  import { useState } from "react";
-  
+  const [guests, setGuests] = useState([]);
+
+  return <div>Party Invite Tracker</div>;
+}
