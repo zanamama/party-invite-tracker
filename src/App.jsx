@@ -7,6 +7,8 @@ export default function App() {
     return (
     <div>
       <h1>Party Invite Tracker</h1>
+            <input type="text" placeholder="Enter guest name" />
+      <button>Add Guest</button>
     </div>
   );
 }
