@@ -21,6 +21,9 @@ export default function App() {
         placeholder="Enter guest name"
       />
       <button>Add Guest</button>
+            <ul>
+        {guests.map((guest, index) => <li key={index}>{guest}</li>)}
+      </ul>
     </div>
   );
 }
