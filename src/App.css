@@ -16,3 +16,73 @@ h1 {
   font-weight: 600;
   letter-spacing: -0.5px;
 }
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"] {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #f0e6f0;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.15);
+}
+
+.rsvp-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.rsvp-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #7a5c7a;
+  transition: color 0.2s;
+}
+
+.rsvp-options label input {
+  accent-color: #d63384;
+}
+
+.rsvp-options label:hover {
+  color: #d63384;
+}
+
+button {
+  background: linear-gradient(135deg, #d63384, #a22a6e);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(214, 51, 132, 0.3);
+}
