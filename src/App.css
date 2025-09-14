@@ -86,3 +86,76 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(214, 51, 132, 0.3);
 }
+
+.guest-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.guest-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  font-size: 1rem;
+  border-left: 4px solid #d63384;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.guest-item.yes .rsvp-status {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.guest-item.no .rsvp-status {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.rsvp-status {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(214, 51, 132, 0.1);
+}
+
+.empty {
+  color: #aaa;
+  font-style: italic;
+  padding: 16px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  background: #fff0f5;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .App {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-group {
+    padding: 1.2rem;
+  }
+
+  button {
+    padding: 12px 20px;
+  }
+}
