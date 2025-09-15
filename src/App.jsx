@@ -39,12 +39,18 @@ export default function App() {
         {guests.length === 0 ? (
           <li className="empty">No guests yet — add someone!</li>
         ) : (
-          guests.map((guest, index) => (
+          {guests.map((guest, index) => (
             <li key={index} className={`guest-item ${guest.rsvp}`}>
               {guest.name} — <span className="rsvp-status">{guest.rsvp === 'yes' ? '✅ Yes' : '❌ No'}</span>
+              <button
+                onClick={() => handleDeleteGuest(index)}
+                className="delete-btn"
+                aria-label="Remove guest"
+              >
+                🗑️
+              </button>
             </li>
-          ))
-        )}
+    ))}
       </ul>
     </div>
   );
