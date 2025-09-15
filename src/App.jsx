@@ -1,16 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 export default function App() {
   const [guests, setGuests] = useState([]);
   const [newGuest, setNewGuest] = useState('');
 
+  useEffect(() => {
+    const saved = localStorage.getItem('guests');
+    if (saved) setGuests(JSON.parse(saved));
+  }, []);
+
   const handleAddGuest = () => {
     if (newGuest.trim() !== '') {
       const rsvp = document.querySelector('input[name="rsvp"]:checked')?.value || 'yes';
-      setGuests([...guests, { name: newGuest.trim(), rsvp }]);
+      const updatedGuests = [...guests, { name: newGuest.trim(), rsvp }];
+      setGuests(updatedGuests);
       setNewGuest('');
+      localStorage.setItem('guests', JSON.stringify(updatedGuests));
     }
+  };
+
+  const handleDeleteGuest = (index) => {
+    const updatedGuests = guests.filter((_, i) => i !== index);
+    setGuests(updatedGuests);
+    localStorage.setItem('guests', JSON.stringify(updatedGuests));
   };
 
   return (
@@ -39,7 +52,7 @@ export default function App() {
         {guests.length === 0 ? (
           <li className="empty">No guests yet — add someone!</li>
         ) : (
-          {guests.map((guest, index) => (
+          guests.map((guest, index) => (
             <li key={index} className={`guest-item ${guest.rsvp}`}>
               {guest.name} — <span className="rsvp-status">{guest.rsvp === 'yes' ? '✅ Yes' : '❌ No'}</span>
               <button
@@ -50,7 +63,8 @@ export default function App() {
                 🗑️
               </button>
             </li>
-    ))}
+          ))
+        )}
       </ul>
     </div>
   );

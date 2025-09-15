@@ -16,6 +16,7 @@ h1 {
   font-weight: 600;
   letter-spacing: -0.5px;
 }
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -56,7 +57,7 @@ input[type="text"]:focus {
   gap: 0.5rem;
   cursor: pointer;
   font-size: 0.95rem;
-  color: #7a5c7a;
+  color: #4e1b4e;
   transition: color 0.2s;
 }
 
@@ -65,11 +66,11 @@ input[type="text"]:focus {
 }
 
 .rsvp-options label:hover {
-  color: #d63384;
+  color: #d671a4;
 }
 
 button {
-  background: linear-gradient(135deg, #d63384, #a22a6e);
+  background: linear-gradient(135deg, #e671ab, #a22a6e);
   color: white;
   border: none;
   padding: 14px 24px;
