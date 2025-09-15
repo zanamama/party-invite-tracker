@@ -5,11 +5,11 @@ A beautiful, simple, and responsive app to track party guests and their RSVP sta
 ![Screenshot](https://github.com/zanamama/party-invite-tracker/blob/main/screenshot.png?raw=true)
 
 ## Features
-- ✅ Add guests with name and RSVP (Yes/No)
-- ✅ Delete guests with one click
-- ✅ Persists data in browser using `localStorage`
-- ✅ Responsive design — works on mobile and desktop
-- ✅ Soft pink theme — cute, modern, feminine
+- Add guests with name and RSVP (Yes/No)
+- Delete guests with one click
+- Persists data in browser using `localStorage`
+- Responsive design — works on mobile and desktop
+- Soft pink theme — cute, modern, feminine
 
 ## How It Works
 - Type a name → select RSVP → click "Add Guest"
