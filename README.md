@@ -1,6 +1,6 @@
 # Party Invite Tracker
 
-A beautiful, responsive app to track party guests and their RSVP status. Built with React, localStorage, and clean CSS.
+A beautiful, simple, and responsive app to track party guests and their RSVP status. Built with React, localStorage, and CSS.
 
 ![Screenshot](https://github.com/zanamama/party-invite-tracker/blob/main/screenshot.png?raw=true)
 
@@ -19,8 +19,8 @@ A beautiful, responsive app to track party guests and their RSVP status. Built w
 
 ## Tech Stack
 - React.js
-- Vite
 - JavaScript
+- Vite
 - CSS
 - localStorage
 
@@ -31,4 +31,4 @@ A beautiful, responsive app to track party guests and their RSVP status. Built w
 4. Open `localhost:5173`
 
 ## Credits
-Built by [Your Name] — a junior developer learning React step by step.
+Built by Zana Mathuthu — software developer based in PA
